@@ -11,6 +11,7 @@ if (!isset($_COOKIE["isAdmin"])) {
 if (isset($_COOKIE["isAdmin"])) {
   if (base64_decode($_COOKIE["isAdmin"]) == "True") {
     echo "<a href='admin.php'>Admin</a>";
+    exit();
   }
 }
 
@@ -37,4 +38,5 @@ if (isset($_GET["id"])) {
 }else {
   echo "Parameter? Cookie? Or Both???";
 }
+
 ?>
